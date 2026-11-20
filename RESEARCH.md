@@ -73,3 +73,31 @@ The group has not confirmed its actual business or location. These are options f
 ## Member contribution and AI assistance
 
 Member 1 (@ors222): selected/reviewed the sources above, documented strengths and limits, connected findings to a service-menu and booking decision, and drafted the homepage, service/pricing page, and appointment-form QA handoff. AI assisted with page-copy and comparison drafting; source claims in this record were checked against the linked original pages. The group is responsible for reviewing and approving the business decisions and prices.
+
+## Collaboration and decision log — November 20, 2026
+
+This log distinguishes the student's direction from the assistant's research and implementation. The preferences below are design inputs from Omari Sellers (Member 1, @ors222), collected in this work session; they are not customer research evidence.
+
+| Input from Omari | How it shaped this draft |
+|---|---|
+| Audience/position: affordable and welcoming for everyday visits | Used the welcoming, accessible everyday-care position as the provisional direction; avoided presenting affordability as a verified fact. |
+| Brand archetype: Caregiver, warm and reassuring | Used supportive, no-pressure copy and plain service descriptions. No testimonials or credentials were invented. |
+| Persuasion: transparent prices and simple booking | Added visible concept starting prices, “from” explanations, a separate service menu, and a booking status notice. |
+| Visual style: soft neutrals with a warm accent | Used cream/paper backgrounds, sage green, and a muted warm accent. |
+| Format: simple static HTML/CSS pages | Built linked `index.html` and `services.html` pages with shared `styles.css`; no framework or booking backend was introduced. |
+| Price basis: local NJ competitor menus; scale for time and effort | Used Hina’s and Salon I Am’s observed menu ranges as reference points, and labeled project prices as drafts. Added notes for length, time, product use, and service complexity. Final prices remain a team decision. |
+
+**Assistant work in this session:** inspected the public repository (which had only `README.md` at clone time); reviewed and linked three NJ salon sites and Vagaro’s official booking guidance; wrote the comparison, evidence/assumption distinctions, two position alternatives, two persona hypotheses, task-to-feature trace, static homepage/services pages, responsive shared styles, and the form QA handoff; then linked the artifacts and identified Member 1 in the README. These files are committed on the local `member-1-home-services` branch. A push was attempted but GitHub writes were unavailable, so the branch is not on the remote yet.
+
+## Remaining work and evidence to collect
+
+| Owner | Next action | Evidence needed to mark complete |
+|---|---|---|
+| Omari / Member 1 + team | Confirm the salon name, business concept, location, real services, booking method, and actual prices. Keep Morrow Beauty Studio and current prices as draft placeholders until then. | Team decision recorded in the shared record; update site and research assumptions. |
+| Member 2 + Omari / Member 1 | Add or share the appointment form, then run the checks in `QA.md`. | Record exact branch/commit or URL, browser and viewport, steps and observed results; report issues to Member 2 and retest accepted fixes. Current result: **not testable; no form in inspected repo**. |
+| Member 1 + a peer reviewer | Ask a reviewer to complete the service/starting-price task in “One customer task and design trace.” | Record reviewer feedback, decision, linked issue, resulting code/docs commit, verification, and reviewer retry. None of that peer-review sequence is recorded yet. |
+| Member 1 | Push `member-1-home-services` to GitHub or apply the committed work through an authorized repo workflow. | Remote branch/commit or PR URL. Current work exists only in the local clone because GitHub rejected writes and local Git had no authentication. |
+| Member 2 and Member 3 | Complete and link their audience/positioning and design/research-verification contributions; review another member as assigned. | Their own evidence, assumptions, decisions, issue/review links, and checks in the shared record. |
+| Team | Publish the evolving documentation and deploy the site when available; submit the shared record and links requested in Canvas. | Published documentation URL, deployed URL if available, relevant issue/response/retest links, and a short change/open-issue note. |
+
+The assignment text provided in this chat lists a deadline of November 17, 2026 at 8:30 a.m. Eastern. That date has passed; if this is still the active submission, check with the instructor about acceptance or next steps. The materials here do not claim a published documentation site, deployed site, completed peer review, or successful appointment-form test.
