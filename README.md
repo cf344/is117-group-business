@@ -133,6 +133,9 @@ Our research will also be accessible through our shared published documentation 
 
 - **GitHub Repository:** https://github.com/cf344/is117-group-business
 - **GitHub Issues:** https://github.com/cf344/is117-group-business/issues
+- **Member 1 Research Draft:** [RESEARCH.md](RESEARCH.md)
+- **Member 1 Site Draft:** [Homepage](index.html) · [Services & Prices](services.html) · [Shared Styles](styles.css)
+- **Member 1 Form QA Handoff:** [QA.md](QA.md) — pending Member 2's form
 - **Published Documentation:** Coming soon
 - **Deployed Website:** Coming soon
 - **Peer Review Evidence:** Coming soon
