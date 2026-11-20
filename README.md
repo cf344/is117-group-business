@@ -10,7 +10,7 @@ Throughout this project, we will compare existing websites, explore different bu
 
 | Team Member | GitHub Username | Main Responsibility |
 |---|---|---|
-| Member 1: [Name] | @ors222 | Website Research & Competitor Analysis |
+| Member 1: Omari Sellers | @ors222 | Website Research, Competitor Analysis & Homepage/Services |
 | Member 2: Clara | @cf344| Target Audience & Business Positioning |
 | Member 3: Tas | @itsfariha | Design Decisions & Research Verification |
 
