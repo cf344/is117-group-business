@@ -1,7 +1,7 @@
 # Member 1 research, site decisions, and open checks
 
 **Research and source review date:** November 20, 2026 (Eastern)  
-**Contribution:** Member 1, @ors222 — competitor review, homepage and services concept, and booking-form QA handoff.  
+**Contribution:** Member 1, @ors2222 — competitor review, homepage and services concept, and booking-form QA handoff.  
 **Question:** How can a neighborhood beauty salon help a first-time or occasional customer understand what a service may cost, choose where to learn more, and feel comfortable taking the next booking step?  
 **Decision to test:** Give visitors a calm, welcoming homepage, a scannable service menu with starting prices, and a clear next step. Make price variation explicit. The current site is a static concept, not a live salon or working booking service.
 
@@ -101,3 +101,155 @@ This log distinguishes the student's direction from the assistant's research and
 | Team | Publish the evolving documentation and deploy the site when available; submit the shared record and links requested in Canvas. | Published documentation URL, deployed URL if available, relevant issue/response/retest links, and a short change/open-issue note. |
 
 The assignment text provided in this chat lists a deadline of November 17, 2026 at 8:30 a.m. Eastern. That date has passed; if this is still the active submission, check with the instructor about acceptance or next steps. The materials here do not claim a published documentation site, deployed site, completed peer review, or successful appointment-form test.
+
+
+---
+
+## Research and Website Integration Update — November 23, 2026
+
+**Contributor:** Clara (@cf344), Member 2
+
+This update reflects the current website implementation and supersedes earlier statements about unavailable features, provisional branding, and unpublished website files.
+
+The original November 20 research observations are preserved as historical evidence.
+
+### Final Business Direction
+
+- Business name: Morrow Beauty Studio
+- Business type: Beauty salon
+- Brand promise: Everyday care, thoughtfully done.
+- Selected position: Welcoming, accessible everyday beauty care.
+- Brand archetype: Caregiver.
+- Target audience: College students, young adults, and everyday customers.
+- Visual identity: Cream backgrounds, sage green accents, readable typography, and welcoming language.
+
+The website now includes six service categories:
+
+- Hair
+- Facials
+- Brows
+- Nails
+- Lashes
+- Makeup
+
+The website remains an educational demonstration rather than a real operating salon.
+
+Sample prices are clearly identified. Services without established sample prices are marked as "To be confirmed."
+
+### Additional Team Research
+
+#### Member 2 — Clara
+
+- Source: [European Wax Center](https://waxcenter.com/)
+- Research date: November 23, 2026.
+- Research focus: Appointment booking and usability.
+- Observation: The booking experience was easy to use.
+- Design decision: Create a straightforward appointment request form with clear labels and organized service selection.
+- Planned verification: Ask a reviewer to complete a demo appointment request and identify any confusing steps.
+
+Full research: [MEMBER2_RESEARCH.md](MEMBER2_RESEARCH.md)
+
+#### Member 3 — Tas
+
+Research sources:
+
+- [GlossGenius Salon Software](https://glossgenius.com/customers/salon-software)
+- [GlossGenius Website Builder](https://glossgenius.com/custom-website-builder)
+
+Research focus: Salon website features, appointment tools, customer trust, and website organization.
+
+GlossGenius was reviewed as a salon software resource, not as an individual salon competitor.
+
+The research informed the proposed design and appointment confirmation experience.
+
+Full research: [MEMBER3_RESEARCH.md](MEMBER3_RESEARCH.md)
+
+### Final Research-to-Design Connections
+
+| Research finding or focus | Implemented decision | Observable verification |
+|---|---|---|
+| Salon I Am presents categorized services and variable starting prices. | Organized service categories and clearly labeled sample prices. | Find a preferred service and identify its starting price. |
+| Hina's Salon presents itemized prices and facial session lengths. | Display facial treatments by duration and sample price. | Locate the 30-minute facial and its sample price. |
+| Lush Atelier emphasizes brand identity and booking navigation. | Consistent salon branding and visible appointment buttons. | Navigate from the homepage to the appointment form. |
+| Vagaro documents a service-to-booking process. | Provide an organized appointment request process without account registration. | Select a service and submit a valid demo request. |
+| European Wax Center provided an easy booking experience for Member 2. | Use clear form labels, grouped services, and straightforward validation. | Complete the appointment form and report any difficulties. |
+| GlossGenius presents salon website and appointment tools. | Provide appointment details, a request ID, and a clear confirmation message. | Submit a request and retrieve the saved confirmation. |
+
+These connections explain how research informed our design. They do not establish that the implemented features have passed usability testing.
+
+### Implemented Website Features
+
+- Homepage with six service categories.
+- Services and sample pricing page.
+- Appointment request form.
+- Required-field and email validation.
+- Future appointment date and time validation.
+- Appointment confirmation page.
+- Unique appointment request IDs.
+- Browser-based appointment storage.
+- Consistent branding and navigation.
+- Responsive desktop, tablet, and mobile styling.
+- Visible keyboard focus indicators.
+
+### Honest Persuasion
+
+The final website uses two main honest persuasion techniques:
+
+1. Transparent pricing: Sample prices, starting prices, and unconfirmed prices are clearly distinguished.
+
+2. Clear appointment expectations: Visitors are informed that appointment requests are pending approval and do not reserve real appointments.
+
+No fake reviews, false urgency, misleading discounts, or guaranteed appointment availability are used.
+
+### Privacy Decision
+
+The appointment request form asks visitors to use fictional contact information.
+
+Only the request ID, selected service, preferred date, preferred time, and pending status are saved in browser localStorage.
+
+Names and email addresses are not stored or transmitted.
+
+### Evidence Versus Assumptions
+
+The original competitor observations remain documented above with their original sources and research dates.
+
+Our audience preferences and expected usability benefits remain hypotheses until tested.
+
+The website implementation is available for review, but successful manual testing and peer feedback must be documented separately.
+
+### Current Project Status
+
+The earlier homepage and services work has been integrated into the shared GitHub repository.
+
+The appointment form, confirmation page, storage functionality, and shared styling are now implemented.
+
+The project has been published through GitHub Pages.
+
+- [Published Website](https://cf344.github.io/is117-group-business/)
+- [Services and Prices](https://cf344.github.io/is117-group-business/services.html)
+- [Appointment Request Form](https://cf344.github.io/is117-group-business/booking.html)
+- [GitHub Repository](https://github.com/cf344/is117-group-business)
+- [GitHub Issues](https://github.com/cf344/is117-group-business/issues)
+
+### Remaining Verification
+
+- [ ] Verify the latest published website.
+- [ ] Test service navigation and pricing visibility.
+- [ ] Test appointment form validation.
+- [ ] Submit a valid demo appointment request.
+- [ ] Verify confirmation details and request ID.
+- [ ] Verify saved appointment retrieval.
+- [ ] Test mobile responsiveness.
+- [ ] Test keyboard navigation.
+- [ ] Complete peer review through GitHub Issues.
+- [ ] Address feedback and retest changes.
+- [ ] Record actual observations in QA.md and LEARNING.md.
+
+### AI Usage
+
+AI assisted with organizing this integration update and connecting existing research to implemented website features.
+
+The original research observations have been preserved.
+
+No unperformed tests, customer interviews, or peer reviews are represented as completed.
+
