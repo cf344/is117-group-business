@@ -297,20 +297,22 @@ Our GitHub history will help demonstrate individual contributions and teamwork.
 
 ## Project Links
 
-**GitHub Repository:**  
-https://github.com/cf344/is117-group-business
 
-**GitHub Issues:**  
-https://github.com/cf344/is117-group-business/issues
+- **GitHub Repository:** https://github.com/cf344/is117-group-business
+- **GitHub Issues:** https://github.com/cf344/is117-group-business/issues
 
-**Published Documentation:**  
-Coming soon
+### Member 1 Contributions
+- **Research Draft:** [RESEARCH.md](RESEARCH.md)
+- **Homepage:** [index.html](index.html)
+- **Services & Prices:** [services.html](services.html)
+- **Shared Styles:** [styles.css](styles.css)
+- **Form QA Handoff:** [QA.md](QA.md) — pending Member 2's form
 
-**Deployed Website:**  
-Coming soon
+### Group Resources
+- **Published Documentation:** Coming soon
+- **Deployed Website:** Coming soon
+- **Peer Review Evidence:** Coming soon
 
-**Peer Review Evidence:**  
-Coming soon
 
 ## Project Status
 
