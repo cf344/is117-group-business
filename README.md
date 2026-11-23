@@ -12,7 +12,7 @@ Throughout this project, we will use research, teamwork, and peer feedback to gu
 
 **Business Type:** Beauty Salon
 
-**Business Name:** The Beauty Salon
+**Business Name:** Morrow Beauty Studio
 
 **Target Audience:** Our proposed audience includes college students and young adults who want an easy and convenient way to explore beauty services and request appointments.
 
