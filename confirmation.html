@@ -1,66 +1,360 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Appointment Request Confirmation | The Beauty Salon</title>
+
+  <title>Appointment Confirmation — Morrow Beauty Studio</title>
+
+  <link rel="stylesheet" href="styles.css">
+
   <style>
-    :root {font-family:Arial,sans-serif;color:#272127;background:#faf5f2}
-    * {box-sizing:border-box} body{margin:0}
-    header{padding:1.2rem 5%;background:#fff;border-bottom:1px solid #e7d8d8}
-    header a{color:#272127;text-decoration:none;font-weight:bold}
-    main{max-width:650px;margin:3rem auto;padding:0 1.2rem}
-    .panel{background:white;border:1px solid #eadcde;border-radius:16px;padding:2rem;box-shadow:0 5px 20px #3d20200a}
-    h1{font-size:1.8rem} .status{color:#6a3850;font-weight:bold}
-    dl{display:grid;grid-template-columns:1fr 1.5fr;gap:1rem;border-top:1px solid #eee;padding-top:1.2rem}
-    dt{font-weight:bold} dd{margin:0;overflow-wrap:anywhere}
-    .notice{background:#f9edf1;padding:1rem;border-radius:8px}
-    a.button{display:inline-block;background:#633b4e;color:white;padding:.85rem 1rem;border-radius:8px;text-decoration:none;margin-top:1rem}
-    :focus-visible{outline:3px solid #aa5578;outline-offset:3px}
-    @media(max-width:480px){dl{grid-template-columns:1fr}main{margin:1.5rem auto}.panel{padding:1.2rem}}
+    .confirmation-container {
+      max-width: 750px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .confirmation-panel {
+      background: #fffefa;
+      border: 1px solid #dedbd2;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 5px 20px #28352d0a;
+    }
+
+    .confirmation-panel h1 {
+      font-family: Georgia, serif;
+      font-size: 36px;
+      line-height: 1.2;
+      color: #28352d;
+      margin: 15px 0;
+    }
+
+    .confirmation-panel p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .status {
+      display: inline-block;
+      background: #dce6d7;
+      color: #355d49;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .confirmation-notice {
+      background: #f1eadf;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .confirmation-panel dl {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 18px;
+      padding: 24px 0;
+      border-top: 1px solid #dedbd2;
+      border-bottom: 1px solid #dedbd2;
+      font-size: 18px;
+    }
+
+    .confirmation-panel dt {
+      font-weight: bold;
+      color: #28352d;
+    }
+
+    .confirmation-panel dd {
+      margin: 0;
+      overflow-wrap: anywhere;
+      color: #355d49;
+    }
+
+    .confirmation-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .confirmation-actions .button {
+      font-size: 16px;
+      padding: 14px 22px;
+    }
+
+    .secondary-button {
+      display: inline-block;
+      padding: 13px 22px;
+      border: 1px solid #355d49;
+      border-radius: 999px;
+      color: #355d49;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .secondary-button:hover {
+      background: #dce6d7;
+    }
+
+    .storage-note {
+      font-size: 15px !important;
+      color: #657168;
+    }
+
+    @media (max-width: 600px) {
+      .confirmation-container {
+        margin: 24px auto;
+        padding: 0 16px;
+      }
+
+      .confirmation-panel {
+        padding: 22px;
+      }
+
+      .confirmation-panel h1 {
+        font-size: 30px;
+      }
+
+      .confirmation-panel dl {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .confirmation-panel dd {
+        margin-bottom: 14px;
+      }
+
+      .confirmation-actions {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header><a href="./index.html">The Beauty Salon</a></header>
-  <main><section class="panel" aria-labelledby="title">
-    <h1 id="title">Appointment request</h1>
-    <p id="message" role="status">Loading your request...</p>
-    <div id="details" hidden>
-      <p class="status">Request received — pending approval</p>
-      <p class="notice">Your appointment is not confirmed yet. The salon must review your request.</p>
-      <dl>
-        <dt>Request ID</dt><dd id="requestId"></dd>
-        <dt>Service</dt><dd id="service"></dd>
-        <dt>Preferred date</dt><dd id="date"></dd>
-        <dt>Preferred time</dt><dd id="time"></dd>
-      </dl>
+
+  <div class="notice">
+    A class project concept · Sample prices · Demo appointment requests
+  </div>
+
+  <!-- Navigation -->
+
+  <header class="site-header">
+    <div class="wrap nav">
+
+      <a class="brand" href="index.html">
+        Morrow Beauty Studio
+        <small>Everyday care, thoughtfully done</small>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+
+        <a href="index.html">Home</a>
+
+        <a href="services.html">
+          Services &amp; Prices
+        </a>
+
+        <a href="booking.html">
+          Book Now
+        </a>
+
+      </nav>
+
     </div>
-    <a class="button" href="./index.html">Return to homepage</a>
-  </section></main>
+  </header>
+
+  <!-- Appointment Confirmation -->
+
+  <main class="confirmation-container">
+
+    <section class="confirmation-panel"
+             aria-labelledby="title">
+
+      <span class="eyebrow">
+        Your next beauty visit
+      </span>
+
+      <h1 id="title">Appointment Request</h1>
+
+      <p id="message" role="status">
+        Loading your appointment request...
+      </p>
+
+      <div id="details" hidden>
+
+        <p>
+          Thank you for trying Morrow Beauty Studio's
+          demo appointment request system.
+        </p>
+
+        <span class="status">
+          Pending Approval
+        </span>
+
+        <div class="confirmation-notice">
+
+          <strong>Your request has been saved locally.</strong>
+
+          <p>
+            This is a demonstration appointment request,
+            not a confirmed reservation. No request has
+            been sent to a real salon.
+          </p>
+
+        </div>
+
+        <h2>Appointment Details</h2>
+
+        <dl>
+
+          <dt>Request ID</dt>
+          <dd id="requestId"></dd>
+
+          <dt>Selected Service</dt>
+          <dd id="service"></dd>
+
+          <dt>Preferred Date</dt>
+          <dd id="date"></dd>
+
+          <dt>Preferred Time</dt>
+          <dd id="time"></dd>
+
+          <dt>Appointment Status</dt>
+          <dd>Pending Approval</dd>
+
+        </dl>
+
+        <p class="storage-note">
+          Your appointment details are stored locally
+          in this browser. You can revisit this confirmation
+          using the same page URL and browser, as long as
+          the saved browser data has not been cleared.
+          Your name and email address are not stored.
+        </p>
+
+      </div>
+
+      <!-- Navigation Buttons -->
+
+      <div class="confirmation-actions">
+
+        <a class="button" href="index.html">
+          Return to Homepage
+        </a>
+
+        <a class="secondary-button" href="booking.html">
+          Request Another Appointment
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+
+  <footer class="site-footer">
+
+    <div class="wrap foot">
+
+      <div>
+
+        <a class="brand" href="index.html">
+          Morrow Beauty Studio
+        </a>
+
+        <p>Everyday care, thoughtfully done.</p>
+
+        <p>IS117 Group Business Project · NJIT</p>
+
+      </div>
+
+      <p class="concept">
+        This website is an educational demonstration.
+        No real reservations or payments are processed.
+      </p>
+
+    </div>
+
+  </footer>
+
+  <!-- Member 3 Confirmation and Storage Retrieval -->
+
   <script>
-    // This page displays a request created by the booking form.
-    // It does not invent a successful submission or confirm an appointment.
-    const id = new URLSearchParams(window.location.search).get('id');
-    const message = document.getElementById('message');
+    const id = new URLSearchParams(
+      window.location.search
+    ).get("id");
+
+    const message = document.getElementById("message");
+
+    const details = document.getElementById("details");
+
     if (id) {
+
       try {
-        const requests = JSON.parse(localStorage.getItem('salonAppointmentRequests') || '{}');
+
+        const requests = JSON.parse(
+          localStorage.getItem(
+            "salonAppointmentRequests"
+          ) || "{}"
+        );
+
         const request = requests[id];
-        if (request && request.status === 'pending') {
-          for (const key of ['requestId','service','date','time']) {
-            document.getElementById(key).textContent = key === 'requestId' ? id : String(request[key] || 'Not provided');
-          }
-          document.getElementById('details').hidden = false;
-          message.hidden = true;
+
+        if (request && request.status === "pending") {
+
+          document.getElementById("requestId")
+            .textContent = id;
+
+          document.getElementById("service")
+            .textContent = request.service || "Not provided";
+
+          document.getElementById("date")
+            .textContent = request.date || "Not provided";
+
+          document.getElementById("time")
+            .textContent = request.time || "Not provided";
+
+          details.hidden = false;
+
+          message.textContent =
+            "Your demo appointment request was saved successfully.";
+
         } else {
-          message.textContent = 'No saved request was found. Please return to the appointment form.';
+
+          message.textContent =
+            "No saved appointment request was found. " +
+            "Please return to the appointment form.";
+
         }
-      } catch {
-        message.textContent = 'Unable to load your request. Please try again.';
+
+      } catch (error) {
+
+        message.textContent =
+          "Unable to load your appointment request. " +
+          "Please try again.";
+
       }
+
     } else {
-      message.textContent = 'No appointment request was provided. Please submit the booking form first.';
+
+      message.textContent =
+        "No appointment request was provided. " +
+        "Please submit the appointment form first.";
+
     }
   </script>
+
 </body>
 </html>
