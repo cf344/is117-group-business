@@ -1,340 +1,464 @@
-# IS117 Group Business — Beauty Salon Booking Website
+
+# Morrow Beauty Studio — IS117 Group Business Project
 
 ## Project Overview
 
-This repository contains our IS117 Group Business project at NJIT. Our group is working together to research, design, and develop a beauty salon website that allows customers to explore beauty services and request appointments online.
+Morrow Beauty Studio is a beauty salon website developed as part of our IS117 Group Business project at NJIT.
 
-Our goal is to create a simple, organized, and user-friendly website where customers can find information about services, view prices, select their preferred appointment date and time, and submit a booking request.
+Our goal is to create a welcoming, organized, and user-friendly website where customers can explore beauty services, review sample prices, and request appointments online.
 
-Throughout this project, we will use research, teamwork, and peer feedback to guide our decisions and improve the website.
+Throughout this project, our group uses research, teamwork, design decisions, programming, and peer feedback to improve the customer experience.
 
-## Business Information
-
-**Business Type:** Beauty Salon
-
-**Business Name:** Morrow Beauty Studio
-
-**Target Audience:** Our proposed audience includes college students and young adults who want an easy and convenient way to explore beauty services and request appointments.
-
-**Business Goal:** Make the appointment request process simple, accessible, and convenient for customers.
-
-**Services We Plan to Offer:**
-- Nail services
-- Eyelash extensions
-- Eyebrow services
-- Makeup services
-
-These services and the target audience are initial proposals that our group will evaluate through research.
-
-## Main Website Features
-
-Our website will include the following features:
-
-### 1. Homepage and Services
-- Introduce the beauty salon and its services.
-- Display available beauty treatments.
-- Show service descriptions and sample prices.
-- Provide clear navigation.
-- Include a button to request an appointment.
-
-### 2. Appointment Booking
-- Allow customers to select a beauty service.
-- Choose a preferred appointment date and time.
-- Enter their name and contact information.
-- Validate required information before submission.
-- Submit an appointment request.
-
-### 3. Appointment Confirmation
-- Display a confirmation message after submission.
-- Generate a unique appointment request ID.
-- Show a summary of the requested appointment.
-- Save appointment requests for later retrieval.
-- Clearly explain that requests are pending approval and are not automatically confirmed appointments.
-
-### 4. Accessibility and Responsive Design
-- Make the website usable on desktop and mobile devices.
-- Use readable text and clear navigation.
-- Support keyboard navigation.
-- Display helpful error messages for invalid form inputs.
-
-## Team Members and Equal Work Division
-
-Our group consists of three members. Each member will contribute to research, design, coding, testing, documentation, and peer review.
-
-| Team Member | GitHub Username | Main Responsibility |
-|---|---|---|
-| Member 1: Omari | @ors222| Homepage and Services |
-| Member 2: Clara| @cf344| Appointment Booking |
-| Member 3: Tas | @itsfariha | Confirmation and Data Storage |
-
-### Member 1 — Homepage and Services
-
-**Research**
-- Research one existing beauty salon website.
-- Document the original source, research date, strengths, and weaknesses.
-- Contribute to the comparison of business positions and audience needs.
-
-**Design and Development**
-- Design and code the homepage.
-- Create the services and pricing section.
-- Build website navigation.
-- Make the pages responsive for mobile devices.
-
-**Testing and Review**
-- Test Member 2's appointment form.
-- Check form usability and mobile responsiveness.
-- Document feedback and verification results.
-
-### Member 2 — Appointment Booking
-
-**Research**
-- Research one existing beauty salon website.
-- Document the original source, research date, strengths, and weaknesses.
-- Contribute to customer persona hypotheses and audience decisions.
-
-**Design and Development**
-- Design and code the appointment request form.
-- Add service selection.
-- Add preferred appointment date and time fields.
-- Collect customer contact information.
-- Implement form validation and helpful error messages.
-
-**Testing and Review**
-- Test Member 3's confirmation and request storage features.
-- Check whether appointment information is saved and displayed correctly.
-- Document feedback and verification results.
-
-### Member 3 — Confirmation and Data Storage
-
-**Research**
-- Research one existing beauty salon website.
-- Document the original source, research date, strengths, and weaknesses.
-- Contribute to brand decisions and honest persuasion techniques.
-
-**Design and Development**
-- Design and code the confirmation page.
-- Generate unique appointment request IDs.
-- Implement saving and retrieving appointment requests.
-- Display submitted appointment information.
-- Handle unsuccessful submissions and missing data.
-
-**Testing and Review**
-- Test Member 1's homepage and services.
-- Check navigation, pricing visibility, and responsive design.
-- Document feedback and verification results.
-
-### Shared Responsibilities
-
-All three members will:
-- Participate in research and planning.
-- Contribute meaningful code to the website.
-- Make identifiable GitHub commits.
-- Review another member's work.
-- Participate in GitHub issue discussions.
-- Verify research findings and AI-generated claims.
-- Help integrate the website's features.
-- Test the complete customer experience.
-- Explain their decisions and contributions.
-
-We will review workloads throughout the project and adjust responsibilities if necessary to keep the total work balanced.
-
-## Research Plan
-
-Before building the website, our team will research existing beauty businesses and compare different approaches.
-
-### 1. Website Comparisons
-
-Each member will research one relevant website.
-
-| Website | Researcher | Focus | Source and Date |
-|---|---|---|---|
-| Website 1 | Member 1 | Services, pricing, and navigation | To be added |
-| Website 2 | Member 2 | Appointment booking and usability | To be added |
-| Website 3 | Member 3 | Design, customer trust, and service information | To be added |
-
-For each website, we will document:
-- Original website URL and date reviewed.
-- Strengths and weaknesses.
-- Relevant features and design choices.
-- Evidence versus assumptions.
-- Lessons that could improve our own website.
-
-### 2. Business Positioning
-
-We will compare two possible business approaches:
-
-**Position A — Affordable Everyday Beauty**
-- Focus on students and young adults.
-- Clear and accessible pricing.
-- Simple and convenient appointment requests.
-- Friendly and welcoming brand personality.
-
-**Position B — Premium Beauty Experience**
-- Focus on customers looking for luxury beauty services.
-- Elegant and minimalist website design.
-- Premium service packages.
-- Personalized customer experience.
-
-**Final Decision:** To be determined after comparing both positions and reviewing our research.
-
-### 3. Customer Persona Hypotheses
-
-We will develop two hypothetical customer personas.
-
-**Persona 1 — College Student**
-- Wants clear pricing and convenient appointment requests.
-- May prefer affordable services.
-- May use a mobile phone to browse and request appointments.
-
-**Persona 2 — Working Professional**
-- Wants a convenient way to request appointments.
-- May prioritize service quality and clear appointment information.
-- May prefer flexible scheduling options.
-
-These personas are assumptions created for planning purposes. They are not based on actual customer interviews unless independently verified.
-
-### 4. Brand and Design Decisions
-
-Our team will research and decide on:
-- Brand personality and character.
-- Website colors and typography.
-- Layout and navigation.
-- Service presentation.
-- Mobile accessibility.
-- Two honest persuasion techniques.
-
-Proposed honest persuasion elements include transparent pricing and clear appointment request status.
-
-Each major design decision will be connected to a research finding and a planned verification check.
-
-## Website Planning and Development
-
-### Main Customer Task
-
-Our website will support the following customer journey:
-
-1. Open the beauty salon website.
-2. Browse available services and prices.
-3. Select a preferred beauty service.
-4. Choose an appointment date and time.
-5. Enter contact information.
-6. Submit the appointment request.
-7. Receive a request confirmation and summary.
-
-The website will not process real payments or automatically guarantee appointment availability.
-
-### Version A — Service-First Booking
-
-Customers browse the available services before opening the appointment request form.
-
-### Version B — Quick Booking
-
-Customers can access the appointment request form directly and select their service from the form.
-
-We plan to build and compare both versions using the same customer tasks. We will document feedback and use the results to select a final direction.
-
-## Testing and Quality Assurance
-
-Each member will test another member's work.
-
-| Tester | Feature Being Tested |
-|---|---|
-| Member 1 | Appointment form and validation |
-| Member 2 | Confirmation and request storage |
-| Member 3 | Homepage, services, and navigation |
-
-Our planned checks include:
-- Navigation links work correctly.
-- Services and prices are easy to find.
-- Appointment forms reject missing or invalid information.
-- Submitted requests are saved correctly.
-- Confirmation pages display accurate information.
-- The website works on mobile devices.
-- Keyboard navigation works correctly.
-
-We will distinguish between planned checks and actual observed results.
-
-## Peer Review Process
-
-We will use GitHub Issues to request and respond to feedback.
-
-Our process:
-
-1. Ask a reviewer to inspect our research or website.
-2. Record feedback through a GitHub issue.
-3. Decide whether to implement, investigate, defer, or decline the suggestion.
-4. Explain our reasoning.
-5. Make changes and link the related commit or pull request.
-6. Verify the changes and record observed results.
-7. Ask the reviewer to retest before closing a resolved issue.
-
-We will also ask reviewers to open original research sources and trace at least one finding into a proposed feature and verification check.
-
-## Project Documentation
-
-Our planned documentation files include:
-
-- `README.md` — Project overview, features, and team responsibilities.
-- `RESEARCH.md` — Website comparisons, original sources, and research findings.
-- `AUDIENCE.md` — Business positions, target audience, and persona hypotheses.
-- `DESIGN.md` — Brand character, design decisions, and proposed features.
-- `PLAN.md` — User stories, alternative approaches, and development plan.
-- `LEARNING.md` — Peer feedback, decisions, changes, and verification results.
-
-These documents will be linked from our shared published documentation site.
-
-## GitHub Workflow
-
-Each member will:
-- Work on assigned features using GitHub branches.
-- Make meaningful commits describing completed work.
-- Open pull requests for review.
-- Review another member's contributions.
-- Respond to GitHub issues.
-- Link changes and verification evidence.
-
-Our GitHub history will help demonstrate individual contributions and teamwork.
+This website is an educational demonstration. It does not process real payments or reserve actual appointments.
 
 ## Project Links
 
+- [Published Website](https://cf344.github.io/is117-group-business/)
+- [Services and Prices](https://cf344.github.io/is117-group-business/services.html)
+- [Appointment Request Form](https://cf344.github.io/is117-group-business/booking.html)
+- [GitHub Repository](https://github.com/cf344/is117-group-business)
+- [GitHub Issues](https://github.com/cf344/is117-group-business/issues)
+- [Pull Requests](https://github.com/cf344/is117-group-business/pulls)
 
-- **GitHub Repository:** https://github.com/cf344/is117-group-business
-- **GitHub Issues:** https://github.com/cf344/is117-group-business/issues
+## Business Information
 
-### Member 1 Contributions
-- **Research Draft:** [RESEARCH.md](RESEARCH.md)
-- **Homepage:** [index.html](index.html)
-- **Services & Prices:** [services.html](services.html)
-- **Shared Styles:** [styles.css](styles.css)
-- **Form QA Handoff:** [QA.md](QA.md) — pending Member 2's form
+**Business Name:** Morrow Beauty Studio
 
-### Group Resources
-- **Published Documentation:** Coming soon
-- **Deployed Website:** Coming soon
-- **Peer Review Evidence:** Coming soon
+**Business Type:** Beauty Salon
 
+**Brand Promise:** Everyday care, thoughtfully done.
+
+**Target Audience:** College students, young adults, and everyday customers looking for convenient and accessible beauty services.
+
+**Business Goal:** Make exploring beauty services and requesting appointments simple, comfortable, and convenient.
+
+### Services
+
+Our website offers six beauty service categories:
+
+- Hair
+- Facials
+- Brows
+- Nails
+- Lashes
+- Makeup
+
+Sample prices are displayed where established. Services without established prices are clearly marked as "To be confirmed."
+
+## Main Website Features
+
+### 1. Homepage and Services
+
+- Introduces Morrow Beauty Studio.
+- Displays six beauty service categories.
+- Provides service descriptions and sample prices.
+- Includes clear website navigation.
+- Provides direct access to the appointment request form.
+
+### 2. Appointment Booking
+
+- Allows visitors to select their preferred beauty service.
+- Allows visitors to choose a preferred date and time.
+- Includes fictional name and email fields.
+- Validates required information.
+- Prevents past appointment dates and times.
+- Provides readable form fields and helpful error messages.
+
+### 3. Appointment Confirmation
+
+- Generates a unique appointment request ID.
+- Displays the selected service, date, and time.
+- Clearly displays the pending approval status.
+- Saves appointment information using browser localStorage.
+- Allows saved requests to be retrieved using their confirmation URL in the same browser.
+- Provides navigation back to the homepage or appointment form.
+
+### 4. Accessibility and Responsive Design
+
+- Responsive desktop, tablet, and mobile layouts.
+- Readable typography.
+- Visible keyboard focus indicators.
+- Clearly labeled form fields.
+- Consistent navigation across website pages.
+- Reduced-motion support.
+
+These features have been implemented in the website code. Final manual verification results will be recorded separately.
+
+## Team Members and Work Division
+
+| Team Member | GitHub Username | Main Responsibility |
+|---|---|---|
+| Omari | @ors2222 | Homepage, services, pricing, and shared styling |
+| Clara | @cf344 | Appointment booking, validation, and website integration |
+| Tas | @itssfariha-lab | Confirmation page, request IDs, and browser storage |
+
+### Member 1 — Omari
+
+#### Research
+
+- Research existing beauty salon websites.
+- Compare service menus, pricing, and navigation.
+- Document research sources and observations.
+- Contribute to audience and business positioning decisions.
+
+#### Development
+
+- Develop the homepage.
+- Develop the services and pricing page.
+- Create the original shared stylesheet.
+- Establish the Morrow Beauty Studio visual identity.
+
+#### Testing Responsibility
+
+- Review Clara's appointment form.
+- Test required fields and form validation.
+- Record feedback and verification results.
+
+### Member 2 — Clara
+
+#### Research
+
+- Research the European Wax Center website.
+- Examine the appointment booking experience.
+- Identify ways to simplify the appointment request process.
+
+#### Development
+
+- Develop the appointment request form.
+- Implement service, date, time, and contact fields.
+- Implement form validation.
+- Improve form readability.
+- Connect the appointment form to the confirmation system.
+- Integrate the website pages using consistent branding, services, navigation, and styling.
+
+#### Testing Responsibility
+
+- Review Tas's confirmation page.
+- Verify that appointment details are displayed correctly.
+- Test saved appointment retrieval.
+- Record feedback and verification results.
+
+### Member 3 — Tas
+
+#### Research
+
+- Research GlossGenius salon website and booking tools.
+- Examine customer trust, website design, and appointment features.
+- Contribute to brand decisions and honest persuasion techniques.
+
+#### Development
+
+- Develop the appointment confirmation page.
+- Generate unique appointment request IDs.
+- Implement browser-based appointment storage.
+- Retrieve saved appointment information.
+- Handle missing or unsuccessful appointment requests.
+
+#### Testing Responsibility
+
+- Review Omari's homepage and services.
+- Check navigation and pricing visibility.
+- Review responsive design.
+- Record feedback and verification results.
+
+### Shared Responsibilities
+
+All three members are responsible for:
+
+- Research and planning.
+- Meaningful programming contributions.
+- Identifiable GitHub commits.
+- Peer review and feedback.
+- Testing and verification.
+- Explaining their individual contributions.
+- Maintaining accurate project documentation.
+
+The work division is intended to balance programming and total project responsibilities. Actual contributions are documented through GitHub history and individual project records.
+
+## Research
+
+Our research examines existing beauty salon websites and salon booking tools to understand how businesses present services, communicate prices, and simplify appointment requests.
+
+### Research Sources
+
+| Source | Researcher | Research Focus |
+|---|---|---|
+| Salon I Am | Omari | Services and pricing |
+| Hina's Salon | Omari | Service organization and customer information |
+| Lush Atelier | Omari | Branding and service presentation |
+| European Wax Center | Clara | Appointment booking and usability |
+| GlossGenius | Tas | Salon website and booking tools |
+
+### Original Sources
+
+- [Salon I Am](https://saloniamnj.com/services/)
+- [Hina's Salon](https://www.hinassalon.com/services)
+- [Lush Atelier](https://lushateliersalon.com/)
+- [European Wax Center](https://waxcenter.com/)
+- [GlossGenius Salon Software](https://glossgenius.com/customers/salon-software)
+- [GlossGenius Website Builder](https://glossgenius.com/custom-website-builder)
+
+Detailed observations, research dates, evidence, and assumptions are documented in the individual research files.
+
+GlossGenius was reviewed as a salon software and website-building resource rather than as an individual salon website.
+
+## Business Positioning
+
+### Position A — Accessible Everyday Beauty
+
+- Welcoming and approachable experience.
+- Clear sample pricing.
+- Convenient appointment requests.
+- Suitable for students and everyday customers.
+
+### Position B — Premium Beauty Experience
+
+- Luxury-oriented service presentation.
+- Elegant and minimalist branding.
+- Specialized beauty services.
+- Greater emphasis on personalized experiences.
+
+### Selected Direction
+
+Morrow Beauty Studio follows Position A, Accessible Everyday Beauty.
+
+This direction supports our goal of making beauty services easy to explore and appointment requests simple to complete.
+
+## Customer Persona Hypotheses
+
+### Persona 1 — College Student
+
+- Wants convenient appointment requests.
+- May prefer accessible prices.
+- May use a mobile phone to browse services.
+- Wants to understand prices before requesting an appointment.
+
+### Persona 2 — Working Professional
+
+- Wants an organized appointment process.
+- May prioritize convenience and service quality.
+- Wants clear service descriptions.
+- May prefer flexible scheduling options.
+
+These personas are planning hypotheses, not verified findings from customer interviews.
+
+## Brand and Design
+
+### Brand Personality
+
+- Welcoming
+- Calm
+- Friendly
+- Accessible
+- Trustworthy
+
+### Visual Identity
+
+- Cream and warm neutral backgrounds.
+- Sage green and dark green accents.
+- Serif headings.
+- Readable sans-serif body text.
+- Rounded cards and buttons.
+- Organized service categories.
+
+### Honest Persuasion
+
+Our website uses two primary honest persuasion techniques:
+
+1. Transparent pricing: Customers can review sample prices before requesting an appointment. Unestablished prices are clearly identified.
+
+2. Clear appointment status: Customers are informed that requests are pending approval and do not represent confirmed appointments.
+
+The website does not use fake reviews, misleading discounts, false urgency, or guaranteed appointment availability.
+
+## Alternative Website Approaches
+
+### Approach A — Service-First Booking
+
+Visitors browse the services and sample prices before opening the appointment request form.
+
+### Approach B — Quick Booking
+
+Visitors access the appointment form directly and select their preferred service from the form.
+
+### Current Implementation
+
+The current website supports both navigation paths:
+
+- Browse services before requesting an appointment.
+- Open the appointment form directly from the homepage.
+
+This allows visitors to choose the path that best fits their needs.
+
+A separate comparison and observed peer-testing results are still needed before claiming that one approach performs better than the other.
+
+## Customer Journey
+
+1. Open the Morrow Beauty Studio homepage.
+2. Explore beauty services and sample prices.
+3. Open the appointment request form.
+4. Select a preferred service.
+5. Choose a future appointment date and time.
+6. Enter fictional contact information.
+7. Submit the appointment request.
+8. View the request ID and appointment details.
+9. Review the pending approval status.
+10. Return to the homepage or request another appointment.
+
+## Technical Implementation
+
+The website uses:
+
+- HTML for page structure.
+- CSS for styling and responsive layouts.
+- JavaScript for form validation and appointment functionality.
+- Browser localStorage for saving and retrieving demo appointment requests.
+- GitHub for collaboration and version control.
+- GitHub Pages for website publication.
+
+### Data Privacy
+
+The appointment storage system saves:
+
+- Unique request ID.
+- Selected service.
+- Preferred date.
+- Preferred time.
+- Pending appointment status.
+
+Names and email addresses are not stored or transmitted.
+
+The website does not use a live salon reservation system or process real payments.
+
+## Website Files
+
+| File | Purpose |
+|---|---|
+| index.html | Homepage and salon introduction |
+| services.html | Service descriptions and sample prices |
+| booking.html | Appointment request form and validation |
+| confirmation.html | Appointment request confirmation |
+| appointment-storage.js | Saving appointment requests |
+| styles.css | Shared website styling and responsive design |
+
+## Testing and Quality Assurance
+
+| Tester | Assigned Feature |
+|---|---|
+| Omari | Appointment form and validation |
+| Clara | Confirmation and appointment storage |
+| Tas | Homepage, services, and navigation |
+
+### Verification Checklist
+
+- [ ] Homepage navigation works correctly.
+- [ ] All six service categories are visible.
+- [ ] Service links open the correct sections.
+- [ ] Appointment buttons open the booking form.
+- [ ] Required fields reject empty submissions.
+- [ ] Invalid email addresses are rejected.
+- [ ] Past appointment dates and times are rejected.
+- [ ] Valid requests open the confirmation page.
+- [ ] Confirmation displays the correct service, date, and time.
+- [ ] A unique request ID is displayed.
+- [ ] Pending approval status is visible.
+- [ ] Saved requests can be retrieved in the same browser.
+- [ ] Mobile navigation and layout work correctly.
+- [ ] Keyboard navigation works correctly.
+- [ ] Peer feedback is documented and addressed.
+
+Checks will be marked complete only after actual testing.
+
+## Peer Review Process
+
+Our group uses GitHub Issues to document peer feedback.
+
+1. Request a review of a specific feature.
+2. Record feedback in a GitHub issue.
+3. Decide whether to implement, investigate, defer, or decline the suggestion.
+4. Explain the decision.
+5. Make necessary changes.
+6. Link the relevant commit or pull request.
+7. Retest the feature.
+8. Record the observed result.
+9. Close the issue when the feedback has been resolved and verified.
+
+## Project Documentation
+
+### Existing Documentation
+
+- [README.md](README.md) — Project overview and responsibilities.
+- [RESEARCH.md](RESEARCH.md) — Salon website research and comparisons.
+- [MEMBER2_RESEARCH.md](MEMBER2_RESEARCH.md) — Clara's booking research.
+- [MEMBER3_RESEARCH.md](MEMBER3_RESEARCH.md) — Tas's design and booking research.
+- [DESIGN.md](DESIGN.md) — Brand identity and design decisions.
+- [QA.md](QA.md) — Quality assurance and testing record.
+
+### Remaining Documentation
+
+- PLAN.md — User stories, essential features, alternative approaches, and observable checks.
+- LEARNING.md — Peer feedback, improvements, testing results, and individual learning.
+
+Audience research and persona hypotheses are included in the shared research and project documentation.
+
+## GitHub Workflow
+
+Our team uses GitHub to collaborate, track changes, and document individual contributions.
+
+Our workflow includes:
+
+- Meaningful commits.
+- Feature branches and pull requests where appropriate.
+- Shared integration updates.
+- GitHub Issues for peer feedback.
+- Documented testing and verification.
 
 ## Project Status
 
-**Current Stage:** Research and Planning
+**Current Stage:** Website integration, testing, and documentation.
 
-**Completed:**
-- Selected the beauty salon booking concept.
-- Created the shared GitHub repository.
-- Proposed the main website features.
-- Established an initial equal work division.
+### Implemented
 
-**Next Steps:**
-- Confirm the business name and final team assignments.
-- Research three existing beauty salon websites.
-- Compare two business positions and two persona hypotheses.
-- Document brand and design decisions.
-- Publish the shared research documentation.
-- Request peer review and record feedback.
-- Begin planning and developing the two website versions.
+- [x] Business concept and brand identity.
+- [x] Team responsibilities.
+- [x] Website research.
+- [x] Business positioning comparison.
+- [x] Customer persona hypotheses.
+- [x] Homepage.
+- [x] Services and pricing page.
+- [x] Appointment request form.
+- [x] Form validation.
+- [x] Appointment confirmation page.
+- [x] Browser-based appointment storage.
+- [x] Consistent branding across website pages.
+- [x] Shared responsive styling.
+- [x] GitHub Pages publication.
+
+### Remaining Work
+
+- [ ] Verify the latest published website.
+- [ ] Update design and research documentation.
+- [ ] Complete the shared project plan.
+- [ ] Perform individual feature testing.
+- [ ] Perform mobile and keyboard testing.
+- [ ] Complete peer review through GitHub Issues.
+- [ ] Address and retest feedback.
+- [ ] Record observed results in QA.md.
+- [ ] Complete LEARNING.md.
+- [ ] Prepare the final project submission.
 
 ## AI Usage
 
-Our group may use AI tools to help brainstorm ideas, organize research, plan features, improve documentation, and support coding.
+Our group uses AI tools to support brainstorming, project organization, documentation, coding, and website integration.
 
-We will verify AI-generated claims against original sources and review AI-assisted work before including it in the project. Our team remains responsible for all final decisions, code, testing, and submitted work.
+AI-assisted work is reviewed by team members. Research claims must be checked against original sources, and website functionality must be verified through actual testing.
+
+Our team remains responsible for all final decisions, code, research, verification, and submitted work.
+
+---
+
+Morrow Beauty Studio
+
+IS117 Group Business Project — NJIT
+
+2026
