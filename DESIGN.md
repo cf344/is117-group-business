@@ -1,61 +1,344 @@
-# DESIGN.md — Beauty Salon Booking Website
 
-**Contributor:** Tasnim Fariha (Member 3)  
-**Project:** IS117 Group Business — The Beauty Salon  
-**Status:** Design proposal; implementation, external research, and tests pending
+# DESIGN.md — Morrow Beauty Studio
 
-## Design goals
-The website should help college students and young adults explore nail, eyelash, eyebrow, and makeup services, see clearly labeled prices, and submit an appointment request. A request is not an automatically confirmed appointment.
+**Original Contributor:** Tasnim Fariha (Member 3)
 
-## Proposed visual direction
-- **Brand personality:** welcoming, clean, approachable, and professional; final branding depends on the team's audience and competitor research.
-- **Color palette:** warm cream background, dark charcoal text, and muted rose accents. Check text and control contrast before implementation.
-- **Typography:** readable sans-serif body text with clear heading hierarchy; avoid decorative text in forms.
-- **Layout:** simple navigation for Home, Services, Prices, and Request Appointment; service cards with clear descriptions and prices.
-- **Responsive/accessibility:** mobile-first layout, visible keyboard focus, descriptive labels, helpful validation messages, and no horizontal scrolling.
+**Integration Updates:** Clara (Member 2)
 
-## Two honest persuasion techniques
-1. **Transparent pricing:** show accurate prices, or clearly mark sample prices until verified. Do not hide conditions or imply a price is final when it is not.
-2. **Clear booking expectations:** explain that submission creates a request pending approval. Do not claim a time slot is reserved or confirmed before the salon approves it.
+**Project:** IS117 Group Business — Morrow Beauty Studio
 
-## Member 3 responsibilities: Confirmation and data storage
-The proposed confirmation flow is:
+**Status:** Design implemented; manual verification and peer review pending.
+
+## 1. Design Goals
+
+Morrow Beauty Studio is designed to help college students, young adults, and everyday customers explore beauty services, understand sample prices, and request appointments through a simple and welcoming website.
+
+The website includes six service categories:
+
+- Hair
+- Facials
+- Brows
+- Nails
+- Lashes
+- Makeup
+
+Our goal is to make the customer experience convenient, readable, organized, and accessible.
+
+An appointment request is not an automatically confirmed appointment.
+
+## 2. Brand Identity
+
+**Business Name:** Morrow Beauty Studio
+
+**Brand Promise:** Everyday care, thoughtfully done.
+
+### Brand Personality
+
+- Welcoming
+- Clean
+- Approachable
+- Professional
+- Calm
+- Trustworthy
+
+### Brand Archetype
+
+The Caregiver archetype supports our focus on comfort, guidance, and everyday personal care.
+
+The website communicates this personality through friendly language, organized information, and a simple appointment process.
+
+## 3. Visual Direction
+
+### Original Proposal
+
+The original design proposed warm cream backgrounds, dark charcoal text, and muted rose accents.
+
+### Final Implemented Direction
+
+During website integration, the design was updated to match the cream and sage green visual identity established in the homepage.
+
+| Color | Hex Code | Purpose |
+|---|---|---|
+| Warm paper | #fbf8f2 | Main background |
+| Cream | #f1eadf | Secondary backgrounds |
+| Sage green | #dce6d7 | Highlighted sections |
+| Dark green | #355d49 | Buttons and important information |
+| Dark charcoal green | #28352d | Main text |
+| Muted green | #657168 | Supporting text |
+| Terracotta | #bd795d | Decorative accents and focus indicators |
+| Warm white | #fffefa | Cards and forms |
+
+The final palette maintains the original goal of creating a calm, welcoming, and professional beauty salon experience.
+
+## 4. Typography
+
+The website uses:
+
+- Georgia and other serif fonts for major headings.
+- Arial and other sans-serif fonts for body text.
+- Larger, readable service descriptions.
+- 20px text in appointment form inputs.
+- Clear heading hierarchy.
+- Bold labels for important form fields.
+
+The typography is intended to make information easy to scan and understand.
+
+## 5. Website Layout
+
+### Homepage
+
+The homepage introduces the business and includes:
+
+- Brand name and navigation.
+- Main introductory section.
+- Appointment request button.
+- Six service cards.
+- Sample pricing information.
+- Brand promise and customer approach.
+- Educational demonstration notice.
+
+### Services Page
+
+The services page includes:
+
+- Six organized service categories.
+- Individual service descriptions.
+- Clearly labeled sample prices.
+- Pricing explanations.
+- Direct access to the appointment form.
+
+Services without established sample prices are marked as "To be confirmed."
+
+### Appointment Request Page
+
+The appointment form includes:
+
+- Service selection organized by category.
+- Preferred appointment date.
+- Preferred appointment time.
+- Fictional customer name.
+- Fictional email address.
+- Required-field validation.
+- Future date and time validation.
+- Privacy information.
+- Submit appointment request button.
+
+### Confirmation Page
+
+The confirmation page includes:
+
+- Unique appointment request ID.
+- Selected service.
+- Preferred date.
+- Preferred time.
+- Pending approval status.
+- Explanation of browser-based storage.
+- Return to homepage button.
+- Request another appointment button.
+
+## 6. Two Honest Persuasion Techniques
+
+### Technique 1 — Transparent Pricing
+
+The website displays sample prices before visitors request an appointment.
+
+Starting prices are clearly identified, and services without established prices are marked as "To be confirmed."
+
+The website does not present sample prices as guaranteed final prices.
+
+**Expected benefit:** Visitors can make more informed decisions about their preferred services.
+
+**Verification:** Ask a reviewer to find a service price and explain whether it is a sample price, starting price, or unconfirmed price.
+
+### Technique 2 — Clear Booking Expectations
+
+The website explains that submitting the form creates a demonstration appointment request marked as pending approval.
+
+The website does not claim that a real appointment has been reserved.
+
+**Expected benefit:** Visitors understand what happens after submitting the form.
+
+**Verification:** Ask a reviewer to submit a demo request and explain whether a real appointment has been confirmed.
+
+## 7. Alternative Design Approaches
+
+### Approach A — Service-First Booking
+
+Visitors explore service descriptions and sample prices before opening the appointment form.
+
+Potential advantages:
+
+- Helps visitors compare services.
+- Makes pricing information available before booking.
+- Supports visitors who are unsure which service to select.
+
+### Approach B — Quick Booking
+
+Visitors open the appointment form directly from the homepage.
+
+Potential advantages:
+
+- Reduces navigation steps.
+- Supports visitors who already know which service they want.
+- Provides a convenient appointment request process.
+
+### Current Implementation
+
+The website supports both approaches through separate navigation paths.
+
+Visitors can browse services first or access the appointment form directly.
+
+Peer testing is still needed to compare the two approaches using the same customer tasks.
+
+## 8. Member 3 — Confirmation and Data Storage
+
+Tas developed the confirmation page and browser-based appointment storage functionality.
+
+The implemented appointment process is:
+
 1. Receive a valid appointment request from Member 2's form.
 2. Generate a unique appointment request ID.
-3. Save the selected service, preferred date/time, contact details, request ID, and pending status using an agreed storage method.
-4. Display a confirmation page with the request ID, selected service, preferred date/time, and **Pending approval** status.
-5. If saving fails, show an error instead of falsely confirming receipt.
-6. Do not expose private contact information in public repository files, URLs, or logs.
+3. Save the selected service, preferred date, preferred time, request ID, and pending status.
+4. Redirect the visitor to the confirmation page.
+5. Retrieve the saved appointment using its request ID.
+6. Display the appointment details and pending approval status.
+7. Display an error message when a saved request cannot be found or retrieved.
 
-The implementation and data format must be coordinated with Member 2. No storage system or confirmation feature is claimed as implemented yet.
+The appointment storage functionality is implemented in appointment-storage.js.
 
-## Proposed verification checklist
+The confirmation page retrieves the saved information from browser localStorage.
 
-| Check | Expected observation | Status |
-|---|---|---|
-| Confirmation summary | Matches the service, date, and time submitted | Not tested |
-| Unique IDs | Separate requests have different IDs | Not tested |
-| Storage/retrieval | Saved requests can be retrieved correctly | Not tested |
-| Failed submission | Error appears; no false success message | Not tested |
-| Booking status | Clearly states pending approval | Not tested |
-| Privacy | Contact details are not exposed publicly | Not tested |
-| Mobile accessibility | Confirmation content remains readable and keyboard accessible | Not tested |
-| Member 1 homepage review | Navigation works; services and prices are visible; mobile layout is usable | Awaiting homepage |
+## 9. Privacy and Ethical Design
 
-## Research and evidence plan
-Member 3 is assigned to review **one existing beauty salon website**. Record its original URL, date reviewed, observable strengths and weaknesses, and findings about service descriptions, prices, visual design, and customer trust. Distinguish observations from assumptions. Connect each verified finding to a proposed design decision and test.
+The appointment form asks visitors to use fictional contact information.
 
-| Original source and date | Observed finding | Design decision | Verification |
+The following information is saved locally:
+
+- Appointment request ID.
+- Selected service.
+- Preferred date.
+- Preferred time.
+- Pending appointment status.
+
+Names and email addresses are not stored or transmitted.
+
+Saved requests can be retrieved using the confirmation URL in the same browser, provided the browser's saved data has not been cleared.
+
+The website does not:
+
+- Process real payments.
+- Reserve real appointment times.
+- Send appointment requests to a real salon.
+- Display fake customer reviews.
+- Use misleading discounts or false urgency.
+
+## 10. Research and Design Connections
+
+Detailed research findings are available in:
+
+- [Shared Research](RESEARCH.md)
+- [Member 2 Research](MEMBER2_RESEARCH.md)
+- [Member 3 Research](MEMBER3_RESEARCH.md)
+
+| Research source | Research observation or focus | Design decision | Planned verification |
 |---|---|---|---|
-| Pending independent website review | Pending | Pending | Pending |
+| Salon I Am | Service presentation and pricing | Organized service categories and sample prices | Find a service and its price |
+| Hina's Salon | Service organization and customer information | Clear descriptions and navigation | Locate a preferred service |
+| Lush Atelier | Beauty branding and service presentation | Consistent visual identity | Review branding across pages |
+| European Wax Center | Member 2 observed an easy booking experience | Simple appointment request form | Complete a demo request |
+| GlossGenius | Salon website and booking tool features | Confirmation details and organized booking flow | Submit and retrieve a demo request |
 
-The other two website comparisons and final business positioning will be completed with the team. The proposed design above is not presented as proven by competitor research.
+GlossGenius was reviewed as a salon software resource rather than as an individual salon website.
 
-## Peer review and team dependencies
-- Coordinate the form-to-confirmation data fields with Clara (Member 2).
-- Review Omari's (Member 1) homepage, services, pricing visibility, navigation, and mobile layout after implementation.
-- Record actionable feedback in a GitHub issue; retest after changes.
-- Update this document with actual source URLs, review dates, implemented decisions, and observed test results before final submission.
+The design decisions represent our team's application of research findings and planning assumptions. Their effectiveness must be evaluated through testing.
 
-## AI use
-AI assisted with drafting and organizing this planning document. Research observations, implementation, and test results have not been fabricated or represented as completed.
+## 11. Responsive and Accessible Design
+
+The website includes:
+
+- Responsive desktop, tablet, and mobile layouts.
+- Visible navigation on smaller screens.
+- Readable text.
+- Descriptive form labels.
+- Visible keyboard focus indicators.
+- Form validation messages.
+- Reduced-motion support.
+- Flexible service card layouts.
+
+These features are implemented in the code, but accessibility and mobile usability still require manual verification.
+
+## 12. Verification Checklist
+
+| Check | Expected Observation | Status |
+|---|---|---|
+| Homepage navigation | Links open the correct pages | Not tested |
+| Service categories | All six categories are visible | Not tested |
+| Pricing transparency | Sample and unconfirmed prices are clearly identified | Not tested |
+| Appointment form | Visitors can select a service, date, and time | Not tested |
+| Required fields | Empty submissions are rejected | Not tested |
+| Invalid email | Incorrect email format is rejected | Not tested |
+| Date and time | Past appointment times are rejected | Not tested |
+| Confirmation summary | Matches the submitted information | Not tested |
+| Unique request IDs | Separate requests have different IDs | Not tested |
+| Storage and retrieval | Saved requests can be retrieved | Not tested |
+| Missing request | An appropriate error message appears | Not tested |
+| Booking status | Clearly displays pending approval | Not tested |
+| Privacy | Names and emails are not stored | Not tested |
+| Mobile layout | Pages remain readable and usable | Not tested |
+| Keyboard accessibility | Interactive elements can be reached and operated | Not tested |
+
+Verification results will be recorded in QA.md and LEARNING.md after actual testing.
+
+## 13. Team Contributions and Integration
+
+### Omari — Member 1
+
+- Homepage design.
+- Services and pricing page.
+- Original cream and sage green visual identity.
+- Shared stylesheet.
+
+### Clara — Member 2
+
+- Appointment request form.
+- Form validation.
+- Larger form typography.
+- Website integration.
+- Consistent branding and navigation across pages.
+
+### Tas — Member 3
+
+- Original design proposal.
+- Confirmation page.
+- Unique appointment request IDs.
+- Browser-based appointment storage and retrieval.
+
+The integration updates preserve the original responsibilities and functionality developed by each team member.
+
+## 14. Peer Review
+
+Each member will review another member's work.
+
+- Omari reviews Clara's appointment form.
+- Clara reviews Tas's confirmation and storage functionality.
+- Tas reviews Omari's homepage and services.
+
+Feedback will be documented through GitHub Issues.
+
+Changes will be explained, implemented where appropriate, and retested before resolved issues are closed.
+
+## 15. AI Usage
+
+AI assisted with organizing the original design proposal, updating documentation, improving website styling, and integrating website features.
+
+The team is responsible for reviewing the code, checking research claims, testing website functionality, and documenting actual observations.
+
+No unperformed tests are represented as successful.
+
+## 16. Project Links
+
+- [Published Website](https://cf344.github.io/is117-group-business/)
+- [Services and Prices](https://cf344.github.io/is117-group-business/services.html)
+- [Appointment Request Form](https://cf344.github.io/is117-group-business/booking.html)
+- [GitHub Repository](https://github.com/cf344/is117-group-business)
+- [GitHub Issues](https://github.com/cf344/is117-group-business/issues)
