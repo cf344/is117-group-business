@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Appointment Request Confirmation | The Beauty Salon</title>
+  <style>
+    :root {font-family:Arial,sans-serif;color:#272127;background:#faf5f2}
+    * {box-sizing:border-box} body{margin:0}
+    header{padding:1.2rem 5%;background:#fff;border-bottom:1px solid #e7d8d8}
+    header a{color:#272127;text-decoration:none;font-weight:bold}
+    main{max-width:650px;margin:3rem auto;padding:0 1.2rem}
+    .panel{background:white;border:1px solid #eadcde;border-radius:16px;padding:2rem;box-shadow:0 5px 20px #3d20200a}
+    h1{font-size:1.8rem} .status{color:#6a3850;font-weight:bold}
+    dl{display:grid;grid-template-columns:1fr 1.5fr;gap:1rem;border-top:1px solid #eee;padding-top:1.2rem}
+    dt{font-weight:bold} dd{margin:0;overflow-wrap:anywhere}
+    .notice{background:#f9edf1;padding:1rem;border-radius:8px}
+    a.button{display:inline-block;background:#633b4e;color:white;padding:.85rem 1rem;border-radius:8px;text-decoration:none;margin-top:1rem}
+    :focus-visible{outline:3px solid #aa5578;outline-offset:3px}
+    @media(max-width:480px){dl{grid-template-columns:1fr}main{margin:1.5rem auto}.panel{padding:1.2rem}}
+  </style>
+</head>
+<body>
+  <header><a href="./index.html">The Beauty Salon</a></header>
+  <main><section class="panel" aria-labelledby="title">
+    <h1 id="title">Appointment request</h1>
+    <p id="message" role="status">Loading your request...</p>
+    <div id="details" hidden>
+      <p class="status">Request received — pending approval</p>
+      <p class="notice">Your appointment is not confirmed yet. The salon must review your request.</p>
+      <dl>
+        <dt>Request ID</dt><dd id="requestId"></dd>
+        <dt>Service</dt><dd id="service"></dd>
+        <dt>Preferred date</dt><dd id="date"></dd>
+        <dt>Preferred time</dt><dd id="time"></dd>
+      </dl>
+    </div>
+    <a class="button" href="./index.html">Return to homepage</a>
+  </section></main>
+  <script>
+    // This page displays a request created by the booking form.
+    // It does not invent a successful submission or confirm an appointment.
+    const id = new URLSearchParams(window.location.search).get('id');
+    const message = document.getElementById('message');
+    if (id) {
+      try {
+        const requests = JSON.parse(localStorage.getItem('salonAppointmentRequests') || '{}');
+        const request = requests[id];
+        if (request && request.status === 'pending') {
+          for (const key of ['requestId','service','date','time']) {
+            document.getElementById(key).textContent = key === 'requestId' ? id : String(request[key] || 'Not provided');
+          }
+          document.getElementById('details').hidden = false;
+          message.hidden = true;
+        } else {
+          message.textContent = 'No saved request was found. Please return to the appointment form.';
+        }
+      } catch {
+        message.textContent = 'Unable to load your request. Please try again.';
+      }
+    } else {
+      message.textContent = 'No appointment request was provided. Please submit the booking form first.';
+    }
+  </script>
+</body>
+</html>
