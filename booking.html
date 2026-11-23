@@ -4,161 +4,339 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Book an Appointment | The Beauty Salon</title>
+
+  <title>Book an Appointment — Morrow Beauty Studio</title>
+
+  <link rel="stylesheet" href="styles.css">
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      font-size: 17px;
-      line-height: 1.5;
-      background: #faf5f2;
-      color: #272127;
-      margin: 0;
-    }
-
-    main {
-      max-width: 550px;
+    .booking-form {
+      max-width: 650px;
       margin: 40px auto;
-      padding: 24px;
-      background: white;
-      border-radius: 14px;
+      padding: 32px;
+      background: #fffefa;
+      border: 1px solid #dedbd2;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px #28352d0a;
     }
 
-    h1 {
-      font-size: 30px;
+    .booking-form h1 {
+      font-family: Georgia, serif;
+      font-size: 36px;
+      line-height: 1.2;
+      margin-top: 12px;
+      color: #28352d;
     }
 
-    label {
+    .booking-form p {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .booking-form label {
       display: block;
-      margin-top: 18px;
+      margin-top: 20px;
       font-size: 18px;
       font-weight: bold;
+      color: #28352d;
     }
 
-    input, select {
+    .booking-form input,
+    .booking-form select {
       width: 100%;
       box-sizing: border-box;
       padding: 14px;
-      margin-top: 6px;
+      margin-top: 8px;
       font-family: Arial, sans-serif;
       font-size: 20px;
-      color: #272127;
+      color: #28352d;
       background: white;
-      border: 1px solid #8b7981;
-      border-radius: 6px;
+      border: 1px solid #87988a;
+      border-radius: 8px;
     }
 
-    button {
+    .booking-form button {
+      width: 100%;
       margin-top: 22px;
-      padding: 14px 22px;
-      background: #633b4e;
+      padding: 16px 22px;
+      background: #355d49;
       color: white;
       font-family: Arial, sans-serif;
       font-size: 18px;
       font-weight: bold;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
     }
 
-    button:hover {
-      background: #4b293a;
+    .booking-form button:hover {
+      background: #264634;
     }
 
-    button:focus-visible,
-    input:focus-visible,
-    select:focus-visible {
-      outline: 3px solid #aa5578;
-      outline-offset: 2px;
+    .booking-form button:focus-visible,
+    .booking-form input:focus-visible,
+    .booking-form select:focus-visible {
+      outline: 3px solid #bd795d;
+      outline-offset: 3px;
     }
 
-    .notice {
-      background: #f9edf1;
-      padding: 12px;
-      border-radius: 6px;
+    .booking-notice {
+      background: #dce6d7;
+      padding: 16px;
+      border-radius: 8px;
+      color: #28352d;
+    }
+
+    .privacy-note {
+      color: #657168;
+      font-size: 15px !important;
     }
 
     #error {
       color: #a01832;
       font-size: 17px;
+      font-weight: bold;
     }
 
-    @media (max-width: 600px) {
-      main {
-        margin: 16px;
-        padding: 20px;
+    @media (max-width: 700px) {
+      .booking-form {
+        margin: 20px 16px;
+        padding: 22px;
+      }
+
+      .booking-form h1 {
+        font-size: 30px;
       }
     }
   </style>
 </head>
 
 <body>
-  <main>
+
+  <div class="notice">
+    A class project concept · Sample prices · Demo appointment requests
+  </div>
+
+  <!-- Navigation -->
+
+  <header class="site-header">
+    <div class="wrap nav">
+
+      <a class="brand" href="index.html">
+        Morrow Beauty Studio
+        <small>Everyday care, thoughtfully done</small>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+
+        <a href="index.html">Home</a>
+
+        <a href="services.html">
+          Services &amp; Prices
+        </a>
+
+        <a href="booking.html" aria-current="page">
+          Book Now
+        </a>
+
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Appointment Form -->
+
+  <main class="booking-form">
+
+    <span class="eyebrow">
+      Your next beauty visit
+    </span>
+
     <h1>Request an Appointment</h1>
 
     <p>
-      Select a service and your preferred appointment
-      date and time.
+      Take a little time for yourself.
+      Select your preferred beauty service, date,
+      and time to submit an appointment request.
     </p>
 
-    <p class="notice">
-      This is a class-project demo. Requests are
-      pending approval, not confirmed bookings.
-      Use fictional contact information.
+    <p class="booking-notice">
+      <strong>Please note:</strong>
+      This is a class-project demonstration.
+      Appointment requests are marked as pending approval
+      and do not reserve real appointments.
+      Please use fictional contact information.
     </p>
 
     <form id="bookingForm">
 
+      <!-- Service Selection -->
+
       <label for="service">Beauty Service *</label>
+
       <select id="service" required>
+
         <option value="">Choose a service</option>
-        <option>Nail services</option>
-        <option>Eyelash extensions</option>
-        <option>Eyebrow services</option>
-        <option>Makeup services</option>
+
+        <optgroup label="Hair">
+          <option>Everyday Haircut</option>
+          <option>Layered Haircut</option>
+          <option>Blowout</option>
+          <option>Root Touch-Up</option>
+          <option>Highlights</option>
+          <option>Color Correction Consultation</option>
+        </optgroup>
+
+        <optgroup label="Facials">
+          <option>Glow Facial — 30 Minutes</option>
+          <option>Custom Facial — 60 Minutes</option>
+          <option>Extended Facial — 90 Minutes</option>
+        </optgroup>
+
+        <optgroup label="Brows">
+          <option>Brow Shaping</option>
+          <option>Brow Shaping &amp; Tint</option>
+        </optgroup>
+
+        <optgroup label="Nails">
+          <option>Classic Manicure</option>
+          <option>Gel Manicure</option>
+          <option>Pedicure</option>
+          <option>Nail Art</option>
+        </optgroup>
+
+        <optgroup label="Lashes">
+          <option>Classic Lash Extensions</option>
+          <option>Volume Lash Extensions</option>
+          <option>Lash Lift</option>
+        </optgroup>
+
+        <optgroup label="Makeup">
+          <option>Natural Makeup</option>
+          <option>Soft Glam Makeup</option>
+          <option>Special Occasion Makeup</option>
+        </optgroup>
+
       </select>
 
+      <!-- Appointment Date -->
+
       <label for="date">Preferred Date *</label>
-      <input type="date" id="date" required>
+
+      <input
+        type="date"
+        id="date"
+        required
+      >
+
+      <!-- Appointment Time -->
 
       <label for="time">Preferred Time *</label>
-      <input type="time" id="time" required>
+
+      <input
+        type="time"
+        id="time"
+        required
+      >
+
+      <!-- Customer Name -->
 
       <label for="name">Your Name *</label>
+
       <input
         type="text"
         id="name"
+        placeholder="Enter a fictional name"
         maxlength="80"
         required
       >
 
-      <label for="email">Email Address *</label>
-      <input type="email" id="email" required>
+      <!-- Customer Email -->
 
-      <p>
-        Demo contact details will not be saved or sent.
+      <label for="email">Email Address *</label>
+
+      <input
+        type="email"
+        id="email"
+        placeholder="example@example.com"
+        required
+      >
+
+      <p class="privacy-note">
+        * Required fields.
+        Demo contact information will not be saved or sent.
+        Only the selected service, preferred date, time,
+        request ID, and pending status are stored locally
+        in your browser.
       </p>
 
+      <!-- Error Message -->
+
       <p id="error" role="alert"></p>
+
+      <!-- Submit Button -->
 
       <button type="submit">
         Submit Appointment Request
       </button>
 
     </form>
+
+    <p>
+      <a class="text-link" href="services.html">
+        ← Return to Services &amp; Prices
+      </a>
+    </p>
+
   </main>
 
+  <!-- Footer -->
+
+  <footer class="site-footer">
+
+    <div class="wrap foot">
+
+      <div>
+
+        <a class="brand" href="index.html">
+          Morrow Beauty Studio
+        </a>
+
+        <p>Everyday care, thoughtfully done.</p>
+
+        <p>IS117 Group Business Project · NJIT</p>
+
+      </div>
+
+      <p class="concept">
+        This website is an educational demonstration.
+        No real reservations or payments are processed.
+      </p>
+
+    </div>
+
+  </footer>
+
+  <!-- Member 3 Appointment Storage -->
+
   <script src="./appointment-storage.js"></script>
+
+  <!-- Member 2 Form Validation -->
 
   <script>
     const form = document.getElementById("bookingForm");
     const dateInput = document.getElementById("date");
+    const timeInput = document.getElementById("time");
+    const nameInput = document.getElementById("name");
+    const errorMessage = document.getElementById("error");
 
     function todayLocal() {
       const now = new Date();
+
       const local = new Date(
         now.getTime() - now.getTimezoneOffset() * 60000
       );
+
       return local.toISOString().slice(0, 10);
     }
 
@@ -167,14 +345,38 @@
     form.addEventListener("submit", function(event) {
       event.preventDefault();
 
-      document.getElementById("error").textContent = "";
+      errorMessage.textContent = "";
       dateInput.min = todayLocal();
 
-      if (!form.reportValidity()) return;
+      if (!form.reportValidity()) {
+        return;
+      }
 
-      if (dateInput.value < dateInput.min) {
-        document.getElementById("error").textContent =
+      if (!nameInput.value.trim()) {
+        errorMessage.textContent =
+          "Please enter a valid name.";
+
+        nameInput.focus();
+        return;
+      }
+
+      if (dateInput.value < todayLocal()) {
+        errorMessage.textContent =
           "Please choose today or a future date.";
+
+        dateInput.focus();
+        return;
+      }
+
+      const preferredDateTime = new Date(
+        dateInput.value + "T" + timeInput.value
+      );
+
+      if (preferredDateTime <= new Date()) {
+        errorMessage.textContent =
+          "Please choose a future appointment date and time.";
+
+        timeInput.focus();
         return;
       }
 
@@ -182,16 +384,17 @@
         const nextPage = saveSalonRequest({
           service: document.getElementById("service").value,
           date: dateInput.value,
-          time: document.getElementById("time").value
+          time: timeInput.value
         });
 
         window.location.assign(nextPage);
 
       } catch (error) {
-        document.getElementById("error").textContent =
+        errorMessage.textContent =
           error.message || "Unable to save the request.";
       }
     });
   </script>
+
 </body>
 </html>
