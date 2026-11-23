@@ -5,24 +5,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Book an Appointment | The Beauty Salon</title>
+
   <style>
-    body { font-family: Arial, sans-serif; background: #faf5f2; color: #272127; margin: 0; }
-    main { max-width: 550px; margin: 40px auto; padding: 24px; background: white; border-radius: 14px; }
-    label { display: block; margin-top: 18px; font-weight: bold; }
-    input, select { width: 100%; box-sizing: border-box; padding: 12px; margin-top: 6px; border: 1px solid #8b7981; border-radius: 6px; }
-    button { margin-top: 22px; padding: 12px 20px; background: #633b4e; color: white; border: none; border-radius: 6px; cursor: pointer; }
-    button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #aa5578; }
-    .notice { background: #f9edf1; padding: 12px; border-radius: 6px; }
-    #error { color: #a01832; }
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.5;
+      background: #faf5f2;
+      color: #272127;
+      margin: 0;
+    }
+
+    main {
+      max-width: 550px;
+      margin: 40px auto;
+      padding: 24px;
+      background: white;
+      border-radius: 14px;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 18px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px;
+      margin-top: 6px;
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      color: #272127;
+      background: white;
+      border: 1px solid #8b7981;
+      border-radius: 6px;
+    }
+
+    button {
+      margin-top: 22px;
+      padding: 14px 22px;
+      background: #633b4e;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #4b293a;
+    }
+
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible {
+      outline: 3px solid #aa5578;
+      outline-offset: 2px;
+    }
+
+    .notice {
+      background: #f9edf1;
+      padding: 12px;
+      border-radius: 6px;
+    }
+
+    #error {
+      color: #a01832;
+      font-size: 17px;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 16px;
+        padding: 20px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <main>
     <h1>Request an Appointment</h1>
-    <p>Select a service and your preferred appointment date and time.</p>
-    <p class="notice">This is a class-project demo. Requests are pending approval, not confirmed bookings. Use fictional contact information.</p>
+
+    <p>
+      Select a service and your preferred appointment
+      date and time.
+    </p>
+
+    <p class="notice">
+      This is a class-project demo. Requests are
+      pending approval, not confirmed bookings.
+      Use fictional contact information.
+    </p>
 
     <form id="bookingForm">
+
       <label for="service">Beauty Service *</label>
       <select id="service" required>
         <option value="">Choose a service</option>
@@ -39,25 +125,40 @@
       <input type="time" id="time" required>
 
       <label for="name">Your Name *</label>
-      <input type="text" id="name" maxlength="80" required>
+      <input
+        type="text"
+        id="name"
+        maxlength="80"
+        required
+      >
 
       <label for="email">Email Address *</label>
       <input type="email" id="email" required>
-      <p>Demo contact details will not be saved or sent.</p>
+
+      <p>
+        Demo contact details will not be saved or sent.
+      </p>
 
       <p id="error" role="alert"></p>
-      <button type="submit">Submit Appointment Request</button>
+
+      <button type="submit">
+        Submit Appointment Request
+      </button>
+
     </form>
   </main>
 
   <script src="./appointment-storage.js"></script>
+
   <script>
     const form = document.getElementById("bookingForm");
     const dateInput = document.getElementById("date");
 
     function todayLocal() {
       const now = new Date();
-      const local = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
+      const local = new Date(
+        now.getTime() - now.getTimezoneOffset() * 60000
+      );
       return local.toISOString().slice(0, 10);
     }
 
@@ -65,6 +166,7 @@
 
     form.addEventListener("submit", function(event) {
       event.preventDefault();
+
       document.getElementById("error").textContent = "";
       dateInput.min = todayLocal();
 
@@ -84,6 +186,7 @@
         });
 
         window.location.assign(nextPage);
+
       } catch (error) {
         document.getElementById("error").textContent =
           error.message || "Unable to save the request.";
