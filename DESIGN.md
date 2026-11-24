@@ -7,7 +7,7 @@
 
 **Project:** IS117 Group Business — Morrow Beauty Studio
 
-**Status:** Design implemented; manual verification and peer review pending.
+**Status:** Design direction and research-to-feature rationale documented; partial form/mobile checks and teammate feedback are recorded in [QA.md](QA.md). Team decision and peer retry for open feedback remain pending.
 
 ## 1. Design Goals
 
@@ -247,6 +247,7 @@ Detailed research findings are available in:
 | Lush Atelier | Beauty branding and service presentation | Consistent visual identity | Review branding across pages |
 | European Wax Center | Member 2 observed an easy booking experience | Simple appointment request form | Complete a demo request |
 | GlossGenius | Salon website and booking tool features | Confirmation details and organized booking flow | Submit and retrieve a demo request |
+| Ulta Beauty — [Services and Events](https://www.ulta.com/beautyservices/all) | Service categories and a direct appointment route; observed appointment link redirected to login | Present service/pricing information before the request action and make the request outcome explicit | Published demo request and confirmation path tested; see [QA.md](QA.md) |
 
 GlossGenius was reviewed as a salon software resource rather than as an individual salon website.
 
@@ -265,29 +266,30 @@ The website includes:
 - Reduced-motion support.
 - Flexible service card layouts.
 
-These features are implemented in the code, but accessibility and mobile usability still require manual verification.
+These features are implemented in the code. Partial browser checks and a reviewer-reported screen-reader result are recorded in [QA.md](QA.md); full keyboard, assistive-technology details, and additional mobile/zoom checks remain to be documented.
 
 ## 12. Verification Checklist
 
 | Check | Expected Observation | Status |
 |---|---|---|
-| Homepage navigation | Links open the correct pages | Not tested |
-| Service categories | All six categories are visible | Not tested |
-| Pricing transparency | Sample and unconfirmed prices are clearly identified | Not tested |
-| Appointment form | Visitors can select a service, date, and time | Not tested |
-| Required fields | Empty submissions are rejected | Not tested |
-| Invalid email | Incorrect email format is rejected | Not tested |
-| Date and time | Past appointment times are rejected | Not tested |
-| Confirmation summary | Matches the submitted information | Not tested |
-| Unique request IDs | Separate requests have different IDs | Not tested |
-| Storage and retrieval | Saved requests can be retrieved | Not tested |
-| Missing request | An appropriate error message appears | Not tested |
-| Booking status | Clearly displays pending approval | Not tested |
-| Privacy | Names and emails are not stored | Not tested |
-| Mobile layout | Pages remain readable and usable | Not tested |
-| Keyboard accessibility | Interactive elements can be reached and operated | Not tested |
+| Homepage navigation | Links open the correct pages | Checked from homepage/services to booking |
+| Service categories | All six categories are visible | Present in published page; full content audit pending |
+| Pricing transparency | Sample and unconfirmed prices are clearly identified | Present in published copy; reviewer task pending |
+| Appointment form | Visitors can select a service, date, and time | Valid demo request completed |
+| Required fields | Empty submissions are rejected | Checked with native browser validation |
+| Invalid email | Incorrect email format is rejected | Checked with malformed test email |
+| Date and time | Past appointment times are rejected | Past time on current date rejected; year boundary needs follow-up |
+| Confirmation summary | Matches the submitted information | Service/date/time/status checked |
+| Unique request IDs | Separate requests have different IDs | One ID observed; uniqueness across multiple requests not yet checked |
+| Storage and retrieval | Saved requests can be retrieved | Confirmation reloaded in same browser successfully |
+| Missing request | An appropriate error message appears | Unknown request ID showed an error state |
+| Booking status | Clearly displays pending approval | Checked; demo does not represent a confirmed reservation |
+| Privacy | Names and emails are not stored | Confirmed by code review of local storage fields |
+| Mobile layout | Pages remain readable and usable | No horizontal overflow observed at 320–390 px |
+| Keyboard accessibility | Interactive elements can be reached and operated | Tab order checked with no trap; full keyboard operation pending |
+| Screen reader | Labels/statuses are announced and usable | Omari reports it worked as intended; AT/browser details not recorded |
 
-Verification results will be recorded in QA.md and LEARNING.md after actual testing.
+Observed browser results and limitations are documented in [QA.md](QA.md). Checks not yet run remain explicitly marked as pending above.
 
 ## 13. Team Contributions and Integration
 
