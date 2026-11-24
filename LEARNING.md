@@ -54,7 +54,7 @@ Overall, this project helped me improve my web development, problem-solving, com
 
 I also learned that implementing a feature does not automatically mean it works correctly. Testing the website and documenting actual results are necessary before considering the project complete.
 
-# LEARNING.md — Member 3 Reflection
+# Member 2 — Tas' Individual Learning Reflection
 
 **Project:** Morrow Beauty Studio — IS117 Group Business  
 **Contributor:** Tas (GitHub: @itssfariha-lab)  
