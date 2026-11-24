@@ -393,6 +393,7 @@ Our group uses GitHub Issues to document peer feedback.
 - [MEMBER3_RESEARCH.md](MEMBER3_RESEARCH.md) — Tas's design and booking research.
 - [DESIGN.md](DESIGN.md) — Brand identity and design decisions.
 - [QA.md](QA.md) — Quality assurance and testing record.
+- [LEARNING.md](LEARNING.md) — Omari's individual learning and project reflection.
 
 ### Remaining Documentation
 
@@ -444,7 +445,6 @@ Our workflow includes:
 - [ ] Complete peer review through GitHub Issues.
 - [ ] Address and retest feedback.
 - [ ] Record observed results in QA.md.
-- [ ] Complete LEARNING.md.
 - [ ] Prepare the final project submission.
 
 ## AI Usage
