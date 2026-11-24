@@ -398,7 +398,6 @@ Our group uses GitHub Issues to document peer feedback.
 ### Remaining Documentation
 
 - PLAN.md — User stories, essential features, alternative approaches, and observable checks.
-- LEARNING.md — Peer feedback, improvements, testing results, and individual learning.
 
 Audience research and persona hypotheses are included in the shared research and project documentation.
 
