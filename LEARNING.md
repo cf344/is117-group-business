@@ -1,7 +1,7 @@
 # Individual Learning and Project Reflection
 
-**Contributor:** Omari Sellers (@ors2222)  
-**Project:** Morrow Beauty Studio  
+**Contributor:** Omari Sellers (@ors2222)
+**Project:** Morrow Beauty Studio
 **Reflection date:** November 23, 2026 (Eastern)
 
 ## My Contributions
