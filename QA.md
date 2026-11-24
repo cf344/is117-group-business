@@ -92,3 +92,46 @@ For each issue, include:
 ## Current site limitation
 
 The published pages store demo appointment details in the visitor's local browser only. They do not send a request to a salon, reserve an appointment, or process payment. The review above applies only to the published demo and commit listed in the test record; stale branches such as `member-1-home-services` may not include the current form.
+
+---
+
+## Member 2 — Appointment Form and Website Retesting
+
+**Tester:** Clara (@cf344)
+
+**Date:** November 23, 2026
+
+**Website:** https://cf344.github.io/is117-group-business/
+
+**Related issue:** [Issue #3](https://github.com/cf344/is117-group-business/issues/3)
+
+### Changes Made After Peer Review
+
+After reviewing Omari's feedback, I updated the appointment form to limit appointment requests to the next 90 days. I also added an explanation that the selected appointment time is a preference and is subject to approval.
+
+I decided not to add an optional notes field because I wanted to keep the form simple and avoid collecting unnecessary customer information.
+
+### Manual Testing Results
+
+| Test | Observed Result | Status |
+|---|---|---|
+| Past appointment dates | Past dates were rejected. | Passed |
+| Dates beyond 90 days | Dates outside the booking window were rejected. | Passed |
+| Valid appointment request | The form accepted valid information. | Passed |
+| Confirmation page | Correct appointment information was displayed. | Passed |
+| Refresh confirmation page | Saved appointment details remained visible. | Passed |
+| Unique request IDs | Two separate requests generated different IDs. | Passed |
+| Mobile responsiveness | The website worked on mobile. | Passed |
+| Keyboard navigation | Keyboard navigation worked. | Passed |
+
+### Testing Summary
+
+All eight manual tests passed. The updated appointment form rejected invalid dates while continuing to accept valid appointment requests. The confirmation page and local storage also worked as expected during my tests.
+
+### What I Learned
+
+This testing helped me understand why peer feedback is important. Even when a website works, there can still be improvements that make it clearer and easier to use. Retesting after making changes also helped me confirm that the improvements did not interfere with the existing features.
+
+### Next Steps
+
+Ask Omari to review and retest the updated appointment form before closing Issue #3. Detailed browser, device, viewport, and commit information was not recorded during this test.
