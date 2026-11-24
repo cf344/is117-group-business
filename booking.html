@@ -92,6 +92,13 @@
       font-size: 15px !important;
     }
 
+    .booking-form .field-help {
+      color: #657168;
+      font-size: 15px;
+      margin: 6px 0 12px;
+      line-height: 1.5;
+    }
+
     #error {
       color: #a01832;
       font-size: 17px;
@@ -226,8 +233,14 @@
       <input
         type="date"
         id="date"
+        aria-describedby="date-help"
         required
       >
+
+      <p id="date-help" class="field-help">
+        Please choose a date between today and
+        90 days from today.
+      </p>
 
       <!-- Appointment Time -->
 
@@ -236,8 +249,15 @@
       <input
         type="time"
         id="time"
+        aria-describedby="time-help"
         required
       >
+
+      <p id="time-help" class="field-help">
+        Your selected time is a preference and is
+        subject to approval. Selecting a time does
+        not guarantee availability or confirm a reservation.
+      </p>
 
       <!-- Customer Name -->
 
@@ -330,28 +350,43 @@
     const nameInput = document.getElementById("name");
     const errorMessage = document.getElementById("error");
 
-    function todayLocal() {
+    const BOOKING_WINDOW_DAYS = 90;
+
+    // Return a local calendar date in YYYY-MM-DD format.
+    function todayLocal(daysAhead = 0) {
       const now = new Date();
 
-      const local = new Date(
-        now.getTime() - now.getTimezoneOffset() * 60000
-      );
+      now.setDate(now.getDate() + daysAhead);
 
-      return local.toISOString().slice(0, 10);
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, "0");
+      const day = String(now.getDate()).padStart(2, "0");
+
+      return `${year}-${month}-${day}`;
     }
 
-    dateInput.min = todayLocal();
+    // Restrict appointment dates to a rolling 90-day window.
+    function updateDateLimits() {
+      dateInput.min = todayLocal();
+      dateInput.max = todayLocal(BOOKING_WINDOW_DAYS);
+    }
+
+    updateDateLimits();
+
+    dateInput.addEventListener("focus", updateDateLimits);
 
     form.addEventListener("submit", function(event) {
       event.preventDefault();
 
       errorMessage.textContent = "";
-      dateInput.min = todayLocal();
+
+      updateDateLimits();
 
       if (!form.reportValidity()) {
         return;
       }
 
+      // Reject empty or whitespace-only names.
       if (!nameInput.value.trim()) {
         errorMessage.textContent =
           "Please enter a valid name.";
@@ -360,19 +395,32 @@
         return;
       }
 
-      if (dateInput.value < todayLocal()) {
+      // Validate the selected date against both boundaries.
+      const selectedDate = dateInput.valueAsNumber;
+      const minimumDate = Date.parse(dateInput.min);
+      const maximumDate = Date.parse(dateInput.max);
+
+      if (
+        !Number.isFinite(selectedDate) ||
+        selectedDate < minimumDate ||
+        selectedDate > maximumDate
+      ) {
         errorMessage.textContent =
-          "Please choose today or a future date.";
+          "Please choose a date within the next 90 days.";
 
         dateInput.focus();
         return;
       }
 
+      // Reject invalid dates and appointment times in the past.
       const preferredDateTime = new Date(
         dateInput.value + "T" + timeInput.value
       );
 
-      if (preferredDateTime <= new Date()) {
+      if (
+        !Number.isFinite(preferredDateTime.getTime()) ||
+        preferredDateTime <= new Date()
+      ) {
         errorMessage.textContent =
           "Please choose a future appointment date and time.";
 
@@ -380,6 +428,7 @@
         return;
       }
 
+      // Save the request using Member 3's storage system.
       try {
         const nextPage = saveSalonRequest({
           service: document.getElementById("service").value,
